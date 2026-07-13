@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 // Import the Pages
 import Dashboard from "../pages/Dashboard";
 import DetailsPage from "../pages/DetailsPage";
+import AboutPage from "../pages/AboutPage";
 
 export default function AppRoutes() {
     return (
@@ -14,6 +15,11 @@ export default function AppRoutes() {
             <Route
                 path="/movie/:id"
                 element={<DetailsPage />}
+            />
+
+            <Route
+                path="/about"
+                element={<AboutPage />}
             />
         </Routes>
     );
