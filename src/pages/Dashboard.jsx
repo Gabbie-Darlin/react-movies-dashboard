@@ -1,8 +1,8 @@
 // Import the react hooks
 import { useEffect, useState } from "react";
-// Import the API connection
+// import the API connection
 import { searchShows } from "../api/tvmaze";
-// Import the components
+// import the components
 import Hero from "../components/Hero";
 import SearchBar from "../components/SearchBar";
 import MovieCarousel from "../components/MovieCarousel";
@@ -10,7 +10,7 @@ import LoadingSpinner from "../components/LoadingSpinner";
 import ErrorMessage from "../components/ErrorMessage";
 
 export default function Dashboard() {
-    
+
     const [movies, setMovies] = useState([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState("");
@@ -41,21 +41,21 @@ export default function Dashboard() {
 
     return (
 
-        <div className="container-py-5">
+        <div className="container py-5">
             <Hero />
 
-            <SearchBar 
+            <SearchBar
                 searchTerm={searchTerm}
                 setSearchTerm={setSearchTerm}
                 handleSearch={handleSearch}
             />
 
             {
-                loading && <LoadingSpinner />
+                loading && <LoadingSpinner /> 
             }
 
             {
-                loading && <ErrorMessage message={error}/>
+                error && <ErrorMessage message={error}/>
             }
 
             {

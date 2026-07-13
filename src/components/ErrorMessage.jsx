@@ -1,4 +1,4 @@
-export default function ErrorMessage() {
+export default function ErrorMessage({message}) {
     return (
         <div className="alert alert-danger">
             {message}
