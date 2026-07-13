@@ -1,16 +1,18 @@
+// Import the React router
+import { BrowserRouter } from "react-router-dom";
 // Import the components
 import Navbar from "./components/Navbar";
-// Import the pages
-import Dashboard from "./pages/Dashboard";
+// Import the App router
+import AppRoutes from "./routes/AppRoutes";
 // Import the CSS styles
 import "./styles/Dashboard.css";
+import "./styles/Details.css";
 
 export default function App() {
     return (
-        <>
+        <BrowserRouter>
             <Navbar />
-            <Dashboard />
-        </>
+            <AppRoutes />
+        </BrowserRouter>
     );
 }
-
